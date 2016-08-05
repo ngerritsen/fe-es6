@@ -1,0 +1,21 @@
+.header {
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 3px #e4e4e4;
+  height: 7rem;
+  margin: 2rem 0 3rem;
+}
+
+.header--title {
+  color: #1abc9c;
+  font-size: 2.6rem;
+  height: 7rem;
+  line-height: 7rem;
+  margin: 0;
+  padding: 0 3rem;
+  text-transform: uppercase;
+}
+
+.header--title-start {
+  font-weight: normal;
+}
