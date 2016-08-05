@@ -1,16 +1,19 @@
 module.exports = {
-  entry: './js/main.js',
+  entry: {
+    main: './js/main.js',
+    header: './js/modules/header/index.js'
+  },
   watch: true,
   output: {
-    path: '.',
-    filename: 'bundle.js'
+    path: './public',
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel'
       }
     ]
   }

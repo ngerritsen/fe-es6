@@ -1,5 +1,7 @@
-import HeaderComponent from './header-component';
+/* exports cb */
+import { createStore, combineReducers } from 'redux';
+import DynamicStore from './core/dynamic-store';
 
-const headerEl = document.querySelector('.header');
-
-new HeaderComponent(headerEl);
+window.cb = {
+  store: new DynamicStore(createStore, combineReducers)
+};
