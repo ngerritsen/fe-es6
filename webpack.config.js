@@ -1,5 +1,6 @@
 module.exports = {
   entry: './js/main.js',
+  watch: true,
   output: {
     path: '.',
     filename: 'bundle.js'

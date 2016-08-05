@@ -1,22 +1,24 @@
+const HIGHLIGHTED_CLASSNAME = 'is-highlighted';
+
 export default class HeaderComponent {
   /**
-   * @param {HeaderView} headerView
+   * @param {Element} el
    */
-  constructor(headerView) {
-    this._active = false;
-    this._headerView = headerView;
-    this._headerView.onClickHeader(() => this._handleHeaderClick);
+  constructor(el) {
+    this._el = el;
+
+    el.addEventListener('click', () => this._toggleHighlight())
   }
 
-  _handleHeaderClick() {
-    console.log('yo');
-    this._active = !this._active;
-
-    if (!this._active) {
-      this._headerView.highlight();
+  /**
+   * @private
+   */
+  _toggleHighlight() {
+    if (this._el.classList.contains(HIGHLIGHTED_CLASSNAME)) {
+      this._el.classList.remove(HIGHLIGHTED_CLASSNAME);
       return;
     }
 
-    this._headerView.unHighlight();
+    this._el.classList.add(HIGHLIGHTED_CLASSNAME);
   }
 }
