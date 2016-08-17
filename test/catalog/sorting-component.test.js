@@ -4,7 +4,7 @@ import { jsdom } from 'jsdom';
 import { simulate } from '../../dom-test-utils';
 
 import DynamicStore from '../../../js/core/dynamic-store';
-import SortingComponent from '../../../js/modules/catalog/sorting-component';
+import SortingComponent from '../../../js/catalog/sorting-component';
 
 const testSortingHtml = `
   <select class="product-list--sorting">

@@ -3,8 +3,8 @@ import sinon from 'sinon';
 import { jsdom } from 'jsdom';
 import { simulate } from '../../dom-test-utils';
 
-import HeaderComponent from '../../../js/modules/header/header-component.js';
-import { toggleHeaderHighlight } from '../../../js/modules/header/header-actions';
+import HeaderComponent from '../../../js/header/header-component.js';
+import { toggleHeaderHighlight } from '../../../js/header/header-actions';
 import DynamicStore from '../../../js/core/dynamic-store';
 
 const testHeaderHtml = '<header class="header"></header>';

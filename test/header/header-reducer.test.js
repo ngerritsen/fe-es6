@@ -1,6 +1,6 @@
 import test from 'ava';
-import headerReducer from '../../../js/modules/header/header-reducer';
-import { toggleHeaderHighlight } from '../../../js/modules/header/header-actions';
+import headerReducer from '../../../js/header/header-reducer';
+import { toggleHeaderHighlight } from '../../../js/header/header-actions';
 
 const initialState = {
   highlight: false
