@@ -10,15 +10,15 @@
   cursor: pointer;
 }
 
-.header.is-highlighted {
+.header--state-highlighted {
   background-color: #1abc9c;
 }
 
-.header.is-highlighted .header--title {
+.header--state-highlighted .header__title {
   color: #fff;
 }
 
-.header--title {
+.header__title {
   color: #1abc9c;
   font-size: 2.6rem;
   height: 7rem;
@@ -28,6 +28,6 @@
   text-transform: uppercase;
 }
 
-.header--title-start {
+.header__title-start {
   font-weight: normal;
 }

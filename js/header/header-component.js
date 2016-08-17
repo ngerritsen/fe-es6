@@ -1,6 +1,6 @@
 import { toggleHeaderHighlight } from './header-actions';
 
-const HIGHLIGHTED_CLASSNAME = 'is-highlighted';
+const HIGHLIGHTED_CLASSNAME = 'header--state-highlighted';
 
 export default class HeaderComponent {
   /**
