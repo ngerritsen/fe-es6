@@ -13,7 +13,7 @@ test.beforeEach((t) => {
     getState: () => {}
   });
   t.context.combineReducersStub = sinon.stub();
-  t.context.dynamicStore = new DynamicStore(() => t.context.storeStub, t.context.combineReducersStub);
+  t.context.dynamicStore = new DynamicStore(t.context.storeStub, t.context.combineReducersStub);
 });
 
 test('Register reducer replaces original store reducer with old and new ones.', (t) => {

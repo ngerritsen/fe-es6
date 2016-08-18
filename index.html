@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header js-header">
             <h1 class="header__title">
                 <span class="header__title-start">My</span>Webshop
             </h1>
@@ -18,7 +18,15 @@
         <main class="main">
             <h2>Products</h2>
 
-            <div class="product-list">
+            <div class="product-list--tools">
+                <label>Sorting: </label>
+                <select class="js-sorting">
+                    <option value="alphabetical" selected>Alphabetical</option>
+                    <option value="price">Price ascending</option>
+                </select>
+            </div>
+
+            <div class="product-list js-products">
                 <div class="product-list__item">
                     <div class="product">
                         <img class="product__image" src="https://image.coolblue.io/products/338827" alt="Apple iPhone 6">
@@ -26,6 +34,15 @@
                         <p class="product__price">640,-</p>
                     </div>
                 </div>
+
+                <div class="product-list__item">
+                    <div class="product">
+                        <img class="product__image" src="https://image.coolblue.io/products/539791" alt="HP 15-BA071ND">
+                        <h3 class="product__title">HP 15-BA071ND</h3>
+                        <p class="product__price">399,-</p>
+                    </div>
+                </div>
+
                 <div class="product-list__item">
                     <div class="product">
                         <img class="product__image" src="https://image.coolblue.io/products/476020" alt="Samsung Galaxy S6">
@@ -33,17 +50,11 @@
                         <p class="product__price">780,-</p>
                     </div>
                 </div>
-                <div class="product-list__item">
-                    <div class="product">
-                        <img class="product__image" src="https://image.coolblue.io/products/461615" alt="Apple iPad Air">
-                        <h3 class="product__title">Apple iPad Air</h3>
-                        <p class="product__price">495,-</p>
-                    </div>
-                </div>
             </div>
         </main>
     </div>
     <script src="public/main.bundle.js"></script>
     <script src="public/header.bundle.js"></script>
+    <script src="public/catalog.bundle.js"></script>
 </body>
 </html>

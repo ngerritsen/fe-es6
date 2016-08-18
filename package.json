@@ -26,6 +26,7 @@
     "babel": "inherit"
   },
   "dependencies": {
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
   }
 }

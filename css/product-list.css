@@ -11,3 +11,9 @@
 .product-list__item:nth-child(3) {
   margin-right: 0;
 }
+
+.product-list--tools {
+  clear: both;
+  text-align: right;
+  margin-bottom: 6rem;
+}

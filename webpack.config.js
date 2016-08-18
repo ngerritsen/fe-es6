@@ -1,7 +1,8 @@
 module.exports = {
   entry: {
     main: './js/main.js',
-    header: './js/header/index.js'
+    header: './js/header/index.js',
+    catalog: './js/catalog/index.js'
   },
   watch: true,
   output: {

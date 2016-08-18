@@ -1,6 +1,10 @@
 export default class DynamicStore {
-  constructor(createStore, combineReducers) {
-    this._store = createStore((state) => state);
+  /**
+   * @param {object} store
+   * @param {function} combineReducers
+   */
+  constructor(store, combineReducers) {
+    this._store = store;
     this._combineReducers = combineReducers;
     this._reducers = {};
   }
@@ -15,7 +19,6 @@ export default class DynamicStore {
     }
 
     this._reducers = Object.assign({}, this._reducers, { [name]: reducer });
-    console.log(this._combineReducers(this._reducers));
     this._store.replaceReducer(this._combineReducers(this._reducers));
   }
 

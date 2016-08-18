@@ -5,6 +5,6 @@ import headerReducer from './header-reducer';
 
 cb.store.registerReducer('header', headerReducer);
 
-const headerEl = document.querySelector('.header');
+const headerEl = document.querySelector('.js-header');
 
 new HeaderComponent(headerEl, cb.store);
