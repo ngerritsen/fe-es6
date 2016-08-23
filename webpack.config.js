@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    main: './js/main.js',
+    core: './js/core/index.js',
     header: './js/header/index.js',
     catalog: './js/catalog/index.js'
   },
