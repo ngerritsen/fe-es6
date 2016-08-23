@@ -1,9 +1,13 @@
 import { changeSorting } from './catalog-actions'
 
 export default class SortingComponent {
-  constructor(el, store) {
+  /**
+   * @param {Element} el
+   * @param {CatalogService} catalogService
+   */
+  constructor(el, catalogService) {
     el.addEventListener('change', () => {
-      store.dispatch(changeSorting(el.value))
+      catalogService.changeSorting(el.value)
     });
   }
 }

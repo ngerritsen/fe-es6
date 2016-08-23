@@ -1,17 +1,24 @@
 /* global cb */
 
 export default class ProductsComponent {
-  constructor(el) {
+  constructor(el, catalogService) {
     this._el = el;
     this._productsEl = el.querySelector('.js-results');
-    const loaderEl = this._el.querySelector('.js-loader');
 
-    new cb.shared.InlineLoaderComponent(loaderEl, store, 'catalog.loading');
+    const loaderEl = this._el.querySelector('.js-loader');
+    this._inlineLoader = new cb.shared.InlineLoaderComponent(loaderEl, catalogService);
+
+    catalogService.subscribe('fetching', () => {
+      this._inlineLoader.start();
+    });
+
+    catalogService.subscribe('fetched', () => {
+      this._replaceProducts.bind(this);
+      this._inlineLoader.stop();
+    });
   }
 
-  render(state) {
-    if (state.products) {
-      this._productsEl.innerHTML = state.products
-    }
+  _replaceProducts(products) {
+    this._productsEl.innerHTML = products;
   }
 }
