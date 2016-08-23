@@ -23,27 +23,6 @@ export default class DynamicStore {
   }
 
   /**
-   * @param {string} namespace
-   * @param {function} handler
-   * @returns {function} unsubscribe
-   */
-  subscribeTo(namespace, handler) {
-    const store = this._store;
-    const selector = (state) => this._getPropertyByNamespace(namespace, state);
-    let previousState = selector(store.getState());
-
-    return this._store.subscribe(() => {
-      const newState = selector(store.getState());
-
-      if (newState !== previousState) {
-        handler(newState);
-      }
-
-      previousState = newState;
-    });
-  }
-
-  /**
    * @returns {object} state
    */
   getState() {
@@ -63,17 +42,5 @@ export default class DynamicStore {
    */
   subscribe(handler) {
     return this._store.subscribe(handler);
-  }
-
-  /**
-   * @param {string} namespace
-   * @param {object} object
-   * @returns {*}
-   * @private
-   */
-  _getPropertyByNamespace(namespace, object) {
-    const keys = namespace.split('.');
-
-    return keys.reduce((result, key) => result[key], object);
   }
 }
